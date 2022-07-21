@@ -1,3 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #FB6B6B;
+  font-family: 'Recursive';
+}
+
+/* Tela1 */
+
+.inicio {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inicio img {
+  width: 136px;
+  height: 161px;
+}
+.inicio h1 {
+  font-family: 'Righteous';
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -0.012em;
+  color: #FFFFFF;
+  margin: 15px 0 30px 0;
+}
+.inicio div {
+  width: 246px;
+  height: 54px;
+  background: #FFFFFF;
+  border: 1px solid #D70900;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D70900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tela2 */
+
+.tela2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+.logo img {
+  width: 52px;
+  height: 60px;
+  margin: 10px;
+}
+.logo h2 {
+  font-family: 'Righteous';
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -0.012em;
+  color: #FFFFFF;
+}
+
+/* Corpo */
+
+.corpo > div {
+  width: 300px;
+  height: 65px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+.corpo > div > div {
+  margin: 10px;
+}
+.corpo > div > ion-icon {
+  margin: 10px;
+  font-size: 25px;
+  color: #333333;
+}
+
+/* Card Virado */
+
+.corpo > .virado {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: initial;
+  width: 299px;
+  height: 131px;
+  background: #FFFFD5;
+}
+.virado > img {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* Base */
+
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+}
+

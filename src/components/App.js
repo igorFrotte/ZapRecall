@@ -1,9 +1,10 @@
-
+import Tela1 from './Tela1';
+import Tela2 from './Tela2';
 
 export default function App() {
     return (
-      <>
-        <h1>oi mundo!</h1>
-      </>
+      <div className='pagina'>
+        <Tela2 />
+      </div>
     );
 }
