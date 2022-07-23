@@ -1,0 +1,67 @@
+
+/* Card Revelado */
+
+.corpo > .revelado {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    align-items: initial;
+    flex-direction: column;
+    width: 299px;
+    min-height: 131px;
+    background: #FFFFD5;
+  }
+  .revelado > img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  
+  /* Card Virado */
+  
+  .botoes {
+    display: flex;
+    justify-content: center;
+  }
+  .bt {
+    width: 85px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .nao {
+    background-color: #FF3030;
+  }
+  .quase {
+    background-color: #FF922E;
+  }
+  .sim {
+    background-color: #2FBE34;
+  }
+  
+  /* Riscado */
+  
+  .vermelho, #vermelho {
+    text-decoration: line-through;
+    color: #FF3030;
+    cursor: default;
+  }
+  .laranja, #laranja {
+    text-decoration: line-through;
+    color: #FF922E;
+    cursor: default;
+  }
+  .verde, #verde {
+    text-decoration: line-through;
+    color: #2FBE34;
+    cursor: default;
+  }

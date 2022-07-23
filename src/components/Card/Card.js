@@ -1,4 +1,6 @@
 import React from "react";
+import setinha from "../../assets/img/setinha.png";
+import "./style.css";
 
 export default function Card({card, resultados, setResultados}) {
 
@@ -41,7 +43,7 @@ export default function Card({card, resultados, setResultados}) {
             <div onClick={() => mudarResultado("quase")} className="bt quase">Quase não lembrei</div>
             <div onClick={() => mudarResultado("certo")} className="bt sim">Zap!</div>
           </div> :
-          <img onClick={() => setVirou(true)} alt="setinha" src="assets/img/setinha.png" /> :
+          <img onClick={() => setVirou(true)} alt="setinha" src={setinha} /> :
           <ion-icon id={risco? cor : ""} onClick={() => {if(cor === ""){setMostrou(true)}}} name={icone}></ion-icon> 
         }
       </div>

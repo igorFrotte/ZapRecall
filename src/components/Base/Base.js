@@ -1,7 +1,11 @@
+import party from "../../assets/img/party.png";
+import sad from "../../assets/img/sad.png";
+import "./style.css";
+
 export default function Base({resultados, deck}) {
 
   let final = false;
-  let img = "assets/img/party.png";
+  let img = party;
   let recado = "Você não esqueceu de nenhum flashcard!";
   let recadoPrincipal = "Parabéns!";
 
@@ -21,7 +25,7 @@ export default function Base({resultados, deck}) {
   if(resultados.length === 4){ //numero 4
     final = true;
     if(errouAlguma()){
-      img = "assets/img/sad.png";
+      img = sad;
       recado = "Ainda faltam alguns... Mas não desanime!";
       recadoPrincipal = "Putz...";
     }

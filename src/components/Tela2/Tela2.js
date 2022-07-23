@@ -1,6 +1,8 @@
-import Base from './Base';
-import Corpo from './Corpo';
+import Base from '../Base/Base';
+import Corpo from '../Corpo/Corpo';
 import React from "react";
+import logo from "../../assets/img/logo.png";
+import "./style.css";
 
 export default function Tela2({deck}) {
 
@@ -9,7 +11,7 @@ export default function Tela2({deck}) {
     return (
       <div className="tela2">
         <div className="logo">
-          <img alt="logo" src="assets/img/logo.png" />
+          <img alt="logo" src={logo} />
           <h2>ZapRecall</h2>
         </div>
         <Corpo resultados={resultados} setResultados={setResultados} deck={deck} />

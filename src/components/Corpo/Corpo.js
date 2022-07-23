@@ -1,4 +1,5 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import "./style.css";
 
 export default function Corpo({deck,resultados, setResultados}) {
 

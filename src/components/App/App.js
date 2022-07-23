@@ -1,6 +1,8 @@
-import Tela1 from './Tela1';
-import Tela2 from './Tela2';
+import Tela1 from '../Tela1/Tela1';
+import Tela2 from '../Tela2/Tela2';
 import React from "react";
+import "../../assets/css/reset.css";
+import "../../assets/css/style.css";
 
 export default function App() {
 

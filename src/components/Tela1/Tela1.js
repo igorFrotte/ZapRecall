@@ -1,3 +1,6 @@
+import logo from "../../assets/img/logo.png";
+import "./style.css";
+
 export default function Tela1({deck, trocarTela}) {
 
 const pergJS = [
@@ -28,7 +31,7 @@ criarDeck(pergJS);
 
     return (
       <div className="inicio">
-        <img alt="logo" src="assets/img/logo.png"/>
+        <img alt="logo" src={logo}/>
         <h1>ZapRecall</h1>
         <div onClick={() => trocarTela()} >Iniciar Recall!</div>
       </div>
