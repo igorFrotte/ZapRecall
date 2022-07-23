@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card({card}) {
+export default function Card({card, resultados, setResultados}) {
 
   const [mostrou, setMostrou] = React.useState(false);
   const [virou, setVirou] = React.useState(false);
@@ -16,14 +16,17 @@ export default function Card({card}) {
       case "errado":
         setCor("vermelho");
         setIcone("close-circle");
+        setResultados([...resultados, ["vermelho","close-circle"]]);
         break;
       case "quase":
         setCor("laranja");
         setIcone("help-circle");
+        setResultados([...resultados, ["laranja","help-circle"]]);
         break;
       case "certo":
         setCor("verde");
         setIcone("checkmark-circle");
+        setResultados([...resultados, ["verde","checkmark-circle"]]);
         break;
       default:
     }

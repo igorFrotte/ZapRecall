@@ -1,9 +1,10 @@
 import Base from './Base';
 import Corpo from './Corpo';
+import React from "react";
 
 export default function Tela2({deck}) {
 
-  
+  const [resultados, setResultados] = React.useState([]);
 
     return (
       <div className="tela2">
@@ -11,8 +12,8 @@ export default function Tela2({deck}) {
           <img alt="logo" src="assets/img/logo.png" />
           <h2>ZapRecall</h2>
         </div>
-        <Corpo deck={deck} />
-        <Base deck={deck} /> 
+        <Corpo resultados={resultados} setResultados={setResultados} deck={deck} />
+        <Base resultados={resultados} deck={deck} /> 
       </div>
     );
 }

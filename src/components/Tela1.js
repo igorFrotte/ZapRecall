@@ -1,4 +1,4 @@
-export default function Tela1({setDeck, trocarTela}) {
+export default function Tela1({deck, trocarTela}) {
 
 const pergJS = [
     ["O que é JSX?","Uma extensão de linguagem do JavaScript"],
@@ -11,7 +11,20 @@ const pergJS = [
     ["Usamos estado (state) para...","dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"]
 ];
 
-setDeck(pergJS);
+function criarDeck(pergResp){
+  pergResp.sort(() => Math.random() - 0.5);
+  for(let i=0;i<4;i++){ // numero 4
+    let card = {
+      numPerg: "Pergunta "+(i+1),
+      pergunta: pergResp[i][0],
+      resposta: pergResp[i][1],
+      resultado: ""
+    }
+    deck.push(card);
+  }
+}
+
+criarDeck(pergJS);
 
     return (
       <div className="inicio">
