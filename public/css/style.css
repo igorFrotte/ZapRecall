@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* Tela2 */
@@ -78,7 +79,7 @@ body {
 
 .corpo > div {
   width: 300px;
-  height: 65px;
+  min-height: 65px;
   background: #FFFFFF;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
@@ -99,23 +100,71 @@ body {
   margin: 10px;
   font-size: 25px;
   color: #333333;
+  cursor: pointer;
 }
 
-/* Card Virado */
+/* Card Revelado */
 
-.corpo > .virado {
+.corpo > .revelado {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   align-items: initial;
+  flex-direction: column;
   width: 299px;
-  height: 131px;
+  min-height: 131px;
   background: #FFFFD5;
 }
-.virado > img {
+.revelado > img {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  cursor: pointer;
+}
+
+/* Card Revelado */
+
+.botoes {
+  display: flex;
+  justify-content: center;
+}
+.bt {
+  width: 85px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 5px;
+  cursor: pointer;
+}
+.nao {
+  background-color: #FF3030;
+}
+.quase {
+  background-color: #FF922E;
+}
+.sim {
+  background-color: #2FBE34;
+}
+
+/* Riscado */
+
+.riscado {
+  text-decoration: line-through;
+}
+.vermelho {
+  color: #FF3030;
+}
+.laranja {
+  color: #FF922E;
+}
+.verde {
+  color: #2FBE34;
 }
 
 /* Base */

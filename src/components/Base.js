@@ -1,6 +1,6 @@
-export default function Base() {
+export default function Base({deck}) {
     return (
-      <div className="base">
+      <div onClick={()=> console.log(deck)} className="base">
         0/4 CONCLUÍDOS 
       </div>
     );
