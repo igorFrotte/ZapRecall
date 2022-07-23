@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 .inicio {
   width: 100vw;
   height: 100vh;
@@ -18,7 +20,7 @@
   color: #FFFFFF;
   margin: 15px 0 30px 0;
 }
-.inicio div {
+.inicio .bt {
   width: 246px;
   height: 54px;
   background: #FFFFFF;
@@ -32,4 +34,48 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.inicio .btDesabilitado {
+  width: 246px;
+  height: 54px;
+  background: #E8E8E8;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C0C0C0;
+  cursor: default;
+}
+.inicio select, .inicio input  {
+  width: 240px;
+  height: 40px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  color: #FB6B6B;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+.inicio option {
+  font-family: 'Roboto';
+  font-size: 18px;
+  margin: 10px;
+  color: #FB6B6B;
+}
+.inicio option:first-child {
+  color: #ADADAD;
+}
+.inicio input::placeholder {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 16px;
+  color: #ADADAD;
+}
+.inicio div {
+  margin-bottom: 15px;
+}
+.inicio h4 {
+  margin-left: 10px;
+  color: #8f1f1f;
 }

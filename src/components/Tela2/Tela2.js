@@ -4,7 +4,7 @@ import React from "react";
 import logo from "../../assets/img/logo.png";
 import "./style.css";
 
-export default function Tela2({deck}) {
+export default function Tela2({numZap, deck, trocarTela}) {
 
   const [resultados, setResultados] = React.useState([]);
 
@@ -15,7 +15,7 @@ export default function Tela2({deck}) {
           <h2>ZapRecall</h2>
         </div>
         <Corpo resultados={resultados} setResultados={setResultados} deck={deck} />
-        <Base resultados={resultados} deck={deck} /> 
+        <Base numZap={numZap} resultados={resultados} trocarTela={trocarTela} /> 
       </div>
     );
 }

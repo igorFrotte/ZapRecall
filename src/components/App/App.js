@@ -8,14 +8,16 @@ export default function App() {
 
   const [tela, setTela] = React.useState(true);
   const [deck, setDeck] = React.useState([]);
+  const [numZap, setNumZap] = React.useState([]);
 
-  function trocarTela(){
+  function trocarTela(valor){
     setTela(!tela);
+    setDeck(valor);
   }
   
     return (
       <div className='pagina'>
-        {tela ? <Tela1 deck={deck} trocarTela={trocarTela} /> : <Tela2 setDeck={setDeck} deck={deck} />}
+        {tela ? <Tela1 setNumZap={setNumZap} deck={deck} trocarTela={trocarTela} /> : <Tela2 numZap={numZap} trocarTela={trocarTela} deck={deck} />}
       </div>
     );
 }

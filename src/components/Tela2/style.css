@@ -12,14 +12,28 @@
   margin: 50px;
 }
 .logo img {
-  width: 52px;
-  height: 60px;
+  width: 88px;
+  height: 100px;
   margin: 10px;
 }
 .logo h2 {
   font-family: 'Righteous';
-  font-size: 36px;
-  line-height: 45px;
+  font-size: 64px;
+  line-height: 79px;
   letter-spacing: -0.012em;
   color: #FFFFFF;
+}
+
+@media (max-width: 800px) {
+
+  .logo img {
+    width: 52px;
+    height: 60px;
+    margin: 10px;
+  }
+  .logo h2 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
 }

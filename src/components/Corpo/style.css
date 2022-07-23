@@ -1,6 +1,9 @@
+.corpo {
+  padding-bottom: 70px;
+}
 .corpo > div {
-  width: 300px;
-  min-height: 65px;
+  width: 570px;
+  min-height: 90px;
   background: #FFFFFF;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
@@ -11,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   position: relative;
 }
 .corpo > div > div {
@@ -22,4 +25,14 @@
   font-size: 25px;
   color: #333333;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+  .corpo > div {
+    width: 300px;
+    min-height: 65px;
+    margin-bottom: 25px;
+  }
+
 }

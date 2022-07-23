@@ -2,29 +2,29 @@ import party from "../../assets/img/party.png";
 import sad from "../../assets/img/sad.png";
 import "./style.css";
 
-export default function Base({resultados, deck}) {
+export default function Base({numZap, resultados, trocarTela}) {
 
   let final = false;
   let img = party;
   let recado = "Você não esqueceu de nenhum flashcard!";
   let recadoPrincipal = "Parabéns!";
 
-  function errouAlguma(){
-    let errados = 0;
+  function zapsCertos(){
+    let zaps = 0;
     for(let i=0;i<resultados.length;i++){
-      if(resultados[i][0] === "vermelho"){
-        errados++;
+      if(resultados[i][0] === "verde"){
+        zaps++;
       }
     }
-    if(errados > 0){ //numer 0
-      return true;
+    if(zaps >= numZap[1]){ 
+      return false;
     }
-    return false;
+    return true;
   }
 
-  if(resultados.length === 4){ //numero 4
+  if(resultados.length + "" === numZap[0]){ 
     final = true;
-    if(errouAlguma()){
+    if(zapsCertos()){
       img = sad;
       recado = "Ainda faltam alguns... Mas não desanime!";
       recadoPrincipal = "Putz...";
@@ -32,13 +32,14 @@ export default function Base({resultados, deck}) {
   }
 
     return (
-      <div onClick={()=> console.log(deck)} className="base">
+      <div className="base">
         {final? <div><img alt="recado" src={img} /><strong>{final? recadoPrincipal: ""}</strong></div> : ""}
         {final? <div>{recado}</div> : ""}
-        <div>{resultados.length}/4 CONCLUÍDOS</div> 
+        <div>{resultados.length}/{numZap[0]} CONCLUÍDOS</div> 
         <p>
         {resultados.map((e, index) => <ion-icon key={index} id={e[0]} name={e[1]} ></ion-icon>)}
         </p>
+        {final?<div onClick={() => trocarTela([]) } className="reiniciar">REINICIAR RECALL</div> : ""}
       </div>
     );
 }

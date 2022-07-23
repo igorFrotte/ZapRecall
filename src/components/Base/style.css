@@ -28,3 +28,17 @@
 .base strong {
   margin-left: 10px;
 }
+.base .reiniciar {
+  width: 160px;
+  height: 32px;
+  background-color: #FB6B6B;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
