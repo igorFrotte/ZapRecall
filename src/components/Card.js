@@ -1,20 +1,32 @@
 import React from "react";
 
-let risco = false;
-let cor = "";
-let icone = "play-outline";
-
 export default function Card({card}) {
 
   const [mostrou, setMostrou] = React.useState(false);
   const [virou, setVirou] = React.useState(false);
+  const [risco, setRisco] = React.useState(false);
+  const [cor, setCor] = React.useState("");
+  const [icone, setIcone] = React.useState("play-outline");
 
   function mudarResultado(valor){
     card.resultado = valor;
-    risco = true;
-    cor = "riscado verde";
-    icone = "close-circle";
     setMostrou(false);
+    setRisco(true);
+    switch(valor){
+      case "errado":
+        setCor("vermelho");
+        setIcone("close-circle");
+        break;
+      case "quase":
+        setCor("laranja");
+        setIcone("help-circle");
+        break;
+      case "certo":
+        setCor("verde");
+        setIcone("checkmark-circle");
+        break;
+      default:
+    }
   }
     return (
       <div className={mostrou? "revelado" : ""}>
@@ -27,7 +39,7 @@ export default function Card({card}) {
             <div onClick={() => mudarResultado("certo")} className="bt sim">Zap!</div>
           </div> :
           <img onClick={() => setVirou(true)} alt="setinha" src="assets/img/setinha.png" /> :
-          <ion-icon className={risco? "sim" : ""} onClick={() => setMostrou(true)} name={icone}></ion-icon> 
+          <ion-icon id={risco? cor : ""} onClick={() => {if(cor === ""){setMostrou(true)}}} name={icone}></ion-icon> 
         }
       </div>
     );

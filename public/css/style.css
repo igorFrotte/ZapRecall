@@ -154,16 +154,16 @@ body {
 
 /* Riscado */
 
-.riscado {
+.vermelho, #vermelho {
   text-decoration: line-through;
-}
-.vermelho {
   color: #FF3030;
 }
-.laranja {
+.laranja, #laranja {
+  text-decoration: line-through;
   color: #FF922E;
 }
-.verde {
+.verde, #verde {
+  text-decoration: line-through;
   color: #2FBE34;
 }
 
