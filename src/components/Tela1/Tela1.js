@@ -7,6 +7,17 @@ export default function Tela1({setNumZap, deck, trocarTela}) {
   const [erro,setErro] = React.useState(["","",""]); //num-meta-selec
   const [revela,setRevela] = React.useState(["","",""]);
 
+  const pergTU = [
+    ["Quem é o melhor tutor?","Marcio Cunha"],
+    ["Quem vai dar Acima das expectativas para esse projeto?","Marcio Cunha"],
+    ["Quem vai adorar esse projeto?","Marcio Cunha"],
+    ["Quem gostou muito desse projeto?","Marcio Cunha"],
+    ["Qual é o melhor bootcamp q existe?","Driven"],
+    ["Quem é o melhor aluno?","Igor Frotté"],
+    ["Quem criou esse projeto incrível?","Igor Frotté"],
+    ["Quem vai tirar Acima das expectativas?","Igor Frotté"]
+];
+
   const pergJS = [
       ["O que é JSX?","Uma extensão de linguagem do JavaScript"],
       ["O React é...","uma biblioteca JavaScript para construção de interfaces"],
@@ -77,7 +88,8 @@ export default function Tela1({setNumZap, deck, trocarTela}) {
           setRevela([...revela]);
         }} >
           <option value="">Escolha seu deck</option>
-          <option value="js">JavaScript</option>
+          <option value="tu">Tutor Driven</option>
+          <option value="js">React</option>
           <option value="br">Brasil</option>
           <option value="al">Aleatório</option>
         </select>
@@ -101,6 +113,9 @@ export default function Tela1({setNumZap, deck, trocarTela}) {
             }
             setErro([...erro]);
             if(erro[0] === "" && erro[1] === "" && erro[2] === ""){
+              if(revela[2] === "tu"){
+                criarDeck(pergTU);
+              }
               if(revela[2] === "js"){
                 criarDeck(pergJS);
               }
